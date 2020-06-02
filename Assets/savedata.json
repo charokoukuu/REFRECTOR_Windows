@@ -1,0 +1,15 @@
+{
+  "clearStage": 3,
+  "stageInfos": [
+    {
+      "getStar": 2
+    },
+    {
+      "getStar": 3
+    },
+    {
+      "getStar": 2
+    }
+  ],
+  "getBall": [3]
+}
