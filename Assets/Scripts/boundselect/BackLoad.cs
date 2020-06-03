@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class BackLoad : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void click()
+    public void click(string value)
     {
-        SceneManager.LoadScene("title");
+        // SceneManager.LoadScene("title");
+        FadeManager.Instance.LoadScene(value, 1);
     }
 }

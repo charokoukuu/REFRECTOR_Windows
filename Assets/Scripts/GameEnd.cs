@@ -39,7 +39,11 @@ public class GameEnd : MonoBehaviour
         }
     }
 
-
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("don");
+        audiosource.PlayOneShot(don);
+    }
     IEnumerator create()
     {
         yield return new WaitForSeconds(0.5f);

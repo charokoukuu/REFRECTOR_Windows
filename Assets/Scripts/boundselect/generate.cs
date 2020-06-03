@@ -16,10 +16,10 @@ public class generate : MonoBehaviour
     void Update()
     {
         delta += Time.deltaTime;
-        if (delta > 1.6f)
+        if (delta > 2.6f)
         {
             GameObject prefab = Instantiate((GameObject)Resources.Load("Ball/" + Now.nowBall));
-            prefab.transform.position = new Vector3(-2.49f, 4.82f, 1);
+            prefab.transform.position = new Vector3(2.57f, 0.5f, 1);
             prefab.AddComponent<jumpbound>();
             prefab.AddComponent<Rigidbody>();
             delta = 0;

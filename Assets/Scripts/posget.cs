@@ -24,21 +24,26 @@ public class posget : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Destroy(prefab);
-            //POS1 = Input.mousePosition;
-            POS1 = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
-            //var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
-            prefab = Instantiate(cubeprefab);
-            POS1.z = 1;
+            if (Input.mousePosition.y < 911)
+            {
+                Debug.Log(Input.mousePosition.x + "," + Input.mousePosition.y);
+                Destroy(prefab);
+                //POS1 = Input.mousePosition;
+                POS1 = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
+                //var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
+                prefab = Instantiate(cubeprefab);
+                POS1.z = 1;
 
-            prefab.transform.position = POS1;
-            prefab.transform.localScale = new Vector3(0, 0, 0);
-            Time.timeScale = 0.1f;
+                prefab.transform.position = POS1;
+                prefab.transform.localScale = new Vector3(0, 0, 0);
+                Time.timeScale = 0.1f;
+            }
 
         }
         else if (Input.GetMouseButtonUp(0))
         {
-
+            // if (Input.mousePosition.y < 911)
+            // {
             //POS2 = Input.mousePosition;
             POS2 = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
 
@@ -48,9 +53,11 @@ public class posget : MonoBehaviour
             prefab.transform.Rotate(Vector3.forward * kakudo * 180 / Mathf.PI);
             prefab.transform.localScale = new Vector3(distance, 0.2f, 1);
             Debug.Log(kakudo * 180 / Mathf.PI);
-            Time.timeScale = 1;
+
 
             //prefab.transform.localScale(Vector3.forward * newposx);
+            // }
+            Time.timeScale = 1;
         }
         else if (Input.GetMouseButton(0))
         {
