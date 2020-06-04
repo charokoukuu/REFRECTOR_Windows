@@ -24,9 +24,9 @@ public class posget : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (Input.mousePosition.y < 911)
+            Debug.Log(Input.mousePosition.x + "," + Input.mousePosition.y);
+            if (Input.mousePosition.y < 917)
             {
-                Debug.Log(Input.mousePosition.x + "," + Input.mousePosition.y);
                 Destroy(prefab);
                 //POS1 = Input.mousePosition;
                 POS1 = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
@@ -42,27 +42,30 @@ public class posget : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            // if (Input.mousePosition.y < 911)
-            // {
-            //POS2 = Input.mousePosition;
-            POS2 = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
+            if (Input.mousePosition.y < 917)
+            {
+                //POS2 = Input.mousePosition;
+                POS2 = Camera.main.ScreenToWorldPoint(Input.mousePosition + Camera.main.transform.forward);
 
-            naiseki = (POS1.x * POS2.x) + (POS1.y * POS2.y);
-            distance = Mathf.Sqrt((POS2.x - POS1.x) * (POS2.x - POS1.x) + (POS2.y - POS1.y) * (POS2.y - POS1.y));
-            kakudo = Mathf.Atan2(POS2.y - POS1.y, POS2.x - POS1.x);
-            prefab.transform.Rotate(Vector3.forward * kakudo * 180 / Mathf.PI);
-            prefab.transform.localScale = new Vector3(distance, 0.2f, 1);
-            Debug.Log(kakudo * 180 / Mathf.PI);
+                naiseki = (POS1.x * POS2.x) + (POS1.y * POS2.y);
+                distance = Mathf.Sqrt((POS2.x - POS1.x) * (POS2.x - POS1.x) + (POS2.y - POS1.y) * (POS2.y - POS1.y));
+                kakudo = Mathf.Atan2(POS2.y - POS1.y, POS2.x - POS1.x);
+                prefab.transform.Rotate(Vector3.forward * kakudo * 180 / Mathf.PI);
+                prefab.transform.localScale = new Vector3(distance, 0.2f, 1);
+                Debug.Log(kakudo * 180 / Mathf.PI);
 
 
-            //prefab.transform.localScale(Vector3.forward * newposx);
-            // }
+                //prefab.transform.localScale(Vector3.forward * newposx);
+            }
             Time.timeScale = 1;
         }
         else if (Input.GetMouseButton(0))
         {
+            // if (Input.mousePosition.y < 917)
+            // {
             iqScore = iqScore - 3;
             iqText.GetComponent<Text>().text = Mathf.Round(iqScore / 10).ToString();
+            // }
         }
     }
 
