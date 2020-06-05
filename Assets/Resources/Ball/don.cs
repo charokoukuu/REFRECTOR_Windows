@@ -6,9 +6,11 @@ public class don : MonoBehaviour
 {
     AudioSource audioSource;
     public AudioClip donse;
+    public GameObject se;
     // Start is called before the first frame update
     void Start()
     {
+        se = GameObject.FindGameObjectWithTag("SE");
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -19,6 +21,6 @@ public class don : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        audioSource.Play();
+        se.GetComponent<SEDirector>().Don();
     }
 }

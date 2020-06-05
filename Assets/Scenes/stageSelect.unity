@@ -489,6 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 1066058384}
+  se: {fileID: 0}
   enableButton: {fileID: 787458264}
 --- !u!114 &69699489
 MonoBehaviour:
@@ -577,6 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 1669842176}
+  se: {fileID: 0}
   enableButton: {fileID: 40780908}
 --- !u!114 &104182598
 MonoBehaviour:
@@ -1063,6 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 303722055}
+  se: {fileID: 0}
   enableButton: {fileID: 52393075}
 --- !u!114 &278464945
 MonoBehaviour:
@@ -1434,6 +1437,80 @@ RectTransform:
   m_AnchoredPosition: {x: 78.6, y: -337.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &710625007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6379597068284962451, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_Name
+      value: BGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 512.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962452, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379597068284962453, guid: 287b7e9cf574e354dac939bb8e2040c0,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6298894dc0de85944926c27e6aa0c61a, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 287b7e9cf574e354dac939bb8e2040c0, type: 3}
 --- !u!1 &768476002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 1939203213}
+  se: {fileID: 0}
   enableButton: {fileID: 208264776}
 --- !u!114 &768476004
 MonoBehaviour:
@@ -1944,6 +2022,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066058384}
   m_CullTransparentMesh: 0
+--- !u!1 &1160230025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7603551295499225588, guid: 2933da217c3d28e4280bee14686fefab,
+    type: 3}
+  m_PrefabInstance: {fileID: 2050984540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1206749545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 938993453}
+  se: {fileID: 0}
   enableButton: {fileID: 1714086999}
 --- !u!114 &1682141819
 MonoBehaviour:
@@ -2935,6 +3020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 1542828092}
+  se: {fileID: 0}
   enableButton: {fileID: 2101544799}
 --- !u!114 &1797695973
 MonoBehaviour:
@@ -3023,6 +3109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 1700519599}
+  se: {fileID: 0}
   enableButton: {fileID: 1990272767}
 --- !u!114 &1888852955
 MonoBehaviour:
@@ -3369,6 +3456,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990272767}
   m_CullTransparentMesh: 0
+--- !u!1001 &2050984540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0513887
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 90.0125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225586, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603551295499225588, guid: 2933da217c3d28e4280bee14686fefab,
+        type: 3}
+      propertyPath: m_Name
+      value: SE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2933da217c3d28e4280bee14686fefab, type: 3}
 --- !u!1 &2101544799
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,8 +3793,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setting: {fileID: 0}
-  clickSE: {fileID: 8300000, guid: dfdd6792044b44bbeb09e3755201807d, type: 3}
-  click2: {fileID: 8300000, guid: 93f157496f80a40ec9609ae39a61c743, type: 3}
+  bgm: {fileID: 0}
+  gene: {fileID: 0}
+  stop: {fileID: 0}
+  se: {fileID: 1160230025}
+  mode: 0
 --- !u!224 &1835951049400247389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4173,6 +4332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numText: {fileID: 6128621852864112522}
+  se: {fileID: 1160230025}
   enableButton: {fileID: 6128621852011832350}
 --- !u!114 &6128621852134233500
 MonoBehaviour:

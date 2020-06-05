@@ -44,8 +44,8 @@ public class leveldirector : MonoBehaviour
                 size = 70;
                 break;
             case 5:
-                level = 70;
-                size = 50;
+                level = 90;
+                size = 40;
                 break;
             case 6:
                 level = 70;

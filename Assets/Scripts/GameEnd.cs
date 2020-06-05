@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameEnd : MonoBehaviour
 {
-    public GameObject end,stop,gameend,iqfield,gameoverdialog;
+    public GameObject end,stop,gameend,iqfield,gameoverdialog,se;
     GameObject bgmobj;
     BgmDirector bgm;
     //public GameObject[] stop=new GameObject[2];
@@ -13,6 +13,7 @@ public class GameEnd : MonoBehaviour
     int coins = 0;
     void Start()
     {
+        se = GameObject.FindGameObjectWithTag("SE");
         if (!gameoverdialog)  gameoverdialog.SetActive(false); 
         bgmobj = GameObject.FindGameObjectWithTag("bgm");
         bgm = bgmobj.GetComponent<BgmDirector>();
@@ -31,7 +32,8 @@ public class GameEnd : MonoBehaviour
         if (other.gameObject.tag == "coin")
         {
             // coins = PlayerPrefs.GetInt("totalcoin", 0);
-            audiosource.PlayOneShot(CoinSe);
+            //audiosource.PlayOneShot(CoinSe);
+            se.GetComponent<SEDirector>().Coin();
             Destroy(other.gameObject);
             // Vibra.Vibrate(100);
             coins++;
@@ -57,8 +59,7 @@ public class GameEnd : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("don");
-        audiosource.PlayOneShot(don);
+        se.GetComponent<SEDirector>().Don();
     }
 
 
@@ -68,6 +69,7 @@ public class GameEnd : MonoBehaviour
     {
         if (StaticPlayer.player.gameover)
         {
+            se.GetComponent<SEDirector>().Over();
             bgm.teisi();
             Debug.Log("OUT!!!");
             //for(int i = 0; i < stop.Length; i++)

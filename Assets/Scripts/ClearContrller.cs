@@ -6,12 +6,13 @@ public class ClearContrller : MonoBehaviour
 {
     //public AudioClip Click;
    public AudioSource audiosource;
-    public GameObject end, stop,button,generate,bgm;
+    public GameObject end, stop,button,generate,bgm,se;
     public RectTransform iq;
     bool judge;
     // Start is called before the first frame update
     void Start()
     {
+        se = GameObject.FindGameObjectWithTag("SE");
         audiosource = GetComponent<AudioSource>();
         judge = false;
     }
@@ -22,10 +23,10 @@ public class ClearContrller : MonoBehaviour
         if (StaticPlayer.player.gameclear)
         {
             //Invoke("DelayMethod", 1.0f);
-            audiosource.Play();
+            se.GetComponent<SEDirector>().Clear();
             StartCoroutine("gene");
         }
-        if (judge&& iq.transform.position.y > 568)
+        if (judge&& iq.transform.position.y > 515)
         {
             iq.position += new Vector3(0, -5, 0);
         }
@@ -33,7 +34,10 @@ public class ClearContrller : MonoBehaviour
         {
             //bgm.GetComponent<AudioSource>().Stop();
             stop.SetActive(false);
-            generate.SetActive(false);
+            if (generate)
+            {
+                generate.SetActive(false);
+            }
         }
         else
         {
