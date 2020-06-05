@@ -36,12 +36,16 @@ public class Player
     public StageInfo[] stageInfos;
     public int[] getBall;
     public int totalCoin;
+    public bool gameover,gameclear,settingmenu;
     public Player()
     {
         clearStage = 0;
         stageInfos = null;
         getBall = new int[1] { 1 };
         totalCoin = 0;
+        gameover = false;
+        gameclear = false;
+        settingmenu = false;
     }
 }
 [System.Serializable]

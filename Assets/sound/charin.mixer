@@ -209,6 +209,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
+  - {fileID: 7778031846843197675}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -276,6 +277,26 @@ AudioMixerEffectController:
     m_GUID: 9e28392a70bb8594986ccffaf921b0f5
   - m_ParameterName: Maximum amp
     m_GUID: 4c7736ea602e67f4d8b1a1ae2b2654e9
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &7778031846843197675
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d0d17731ca4dec24d9a5fd8671223feb
+  m_EffectName: Normalize
+  m_MixLevel: 9944cf5e2a7256a458dab80fb537b31d
+  m_Parameters:
+  - m_ParameterName: Fade in time
+    m_GUID: 3a23f2bb8e05e1b4cad3208252c8134f
+  - m_ParameterName: Lowest volume
+    m_GUID: a8cecbc776090f14ea6830ec6cb9cdc9
+  - m_ParameterName: Maximum amp
+    m_GUID: 3ae446f44d19ef44e8243a276f4c19d3
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0

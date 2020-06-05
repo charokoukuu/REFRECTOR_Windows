@@ -15,7 +15,7 @@ public class loadScene : MonoBehaviour
             StaticPlayer.savePlayerData(StaticPlayer.player);
         }
         Now.nowStage++;
-        SceneManager.LoadScene("Bound");
+        FadeManager.Instance.LoadScene("Bound",1.0f);
     }
     public void titleClick()
     {

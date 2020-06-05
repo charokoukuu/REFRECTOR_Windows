@@ -67,15 +67,15 @@ public class DrawLine : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
-            if (Input.mousePosition.y < 917)
-            {
+            //if (Input.mousePosition.y < 917)
+            //{
                 Vector3 mousePosition = m_Camera.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = m_LineRenderer.transform.position.z;
 
                 m_LineRenderer.SetPosition(0, startPos);
                 m_LineRenderer.SetPosition(1, mousePosition);
 
-            }
+            //}
         }
 
         if (Input.GetMouseButtonUp(0))

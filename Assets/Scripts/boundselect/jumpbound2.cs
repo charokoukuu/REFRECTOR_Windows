@@ -10,7 +10,7 @@ public class jumpbound2 : MonoBehaviour
     {
         //gameObject.transform.Rotate(0, 0, 0);
         rd = GetComponent<Rigidbody>();
-        rd.AddForce(8, -4, 0, ForceMode.VelocityChange);
+        rd.AddForce(10, -7, 0, ForceMode.VelocityChange);
         Invoke("DestroyDir", 3.5f);
     }
 

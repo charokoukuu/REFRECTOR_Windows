@@ -13,7 +13,7 @@ public class posget : MonoBehaviour
     public GameObject cubeprefab;
     GameObject prefab;
 
-    int iqScore = 1600;
+    public int iqScore = 1600;
     public GameObject iqText;
     // Update is called once per frame
 
@@ -22,10 +22,11 @@ public class posget : MonoBehaviour
     }
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log(Input.mousePosition.x + "," + Input.mousePosition.y);
-            if (Input.mousePosition.y < 917)
+            if (Input.mousePosition.x>567 || Input.mousePosition.y< 917)
             {
                 Destroy(prefab);
                 //POS1 = Input.mousePosition;
@@ -52,7 +53,7 @@ public class posget : MonoBehaviour
                 kakudo = Mathf.Atan2(POS2.y - POS1.y, POS2.x - POS1.x);
                 prefab.transform.Rotate(Vector3.forward * kakudo * 180 / Mathf.PI);
                 prefab.transform.localScale = new Vector3(distance, 0.2f, 1);
-                Debug.Log(kakudo * 180 / Mathf.PI);
+                //Debug.Log(kakudo * 180 / Mathf.PI);
 
 
                 //prefab.transform.localScale(Vector3.forward * newposx);
@@ -65,6 +66,10 @@ public class posget : MonoBehaviour
             // {
             iqScore = iqScore - 3;
             iqText.GetComponent<Text>().text = Mathf.Round(iqScore / 10).ToString();
+            if (iqScore < 0)
+            {
+                StaticPlayer.player.gameover = true;
+            }
             // }
         }
     }

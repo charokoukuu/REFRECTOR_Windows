@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class GameEnd : MonoBehaviour
 {
-    public GameObject end;
+    public GameObject end,stop,gameend,iqfield,gameoverdialog;
+    GameObject bgmobj;
+    BgmDirector bgm;
+    //public GameObject[] stop=new GameObject[2];
     public AudioClip CoinSe, Click, don;
     AudioSource audiosource;
     int coins = 0;
     void Start()
     {
+        if (!gameoverdialog)  gameoverdialog.SetActive(false); 
+        bgmobj = GameObject.FindGameObjectWithTag("bgm");
+        bgm = bgmobj.GetComponent<BgmDirector>();
         audiosource = GetComponent<AudioSource>();
     }
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "end")
         {
-            audiosource.PlayOneShot(Click);
+            bgm.teisi();
             StartCoroutine("create");
+            Time.timeScale = 1;
+            Destroy(gameObject.GetComponent<Rigidbody>());
+            //audiosource.PlayOneShot(Click);
         }
         if (other.gameObject.tag == "coin")
         {
@@ -37,17 +46,40 @@ public class GameEnd : MonoBehaviour
             Debug.Log("don");
             audiosource.PlayOneShot(don);
         }
+     
     }
-
+    IEnumerator create()
+    {
+        yield return new WaitForSeconds(0.1f);
+       
+        StaticPlayer.player.gameclear = true;
+        Destroy(gameObject);
+    }
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log("don");
         audiosource.PlayOneShot(don);
     }
-    IEnumerator create()
+
+
+
+
+    private void Update()
     {
-        yield return new WaitForSeconds(0.5f);
-        end.SetActive(true);
-        Destroy(gameObject);
+        if (StaticPlayer.player.gameover)
+        {
+            bgm.teisi();
+            Debug.Log("OUT!!!");
+            //for(int i = 0; i < stop.Length; i++)
+            //{
+            //    stop[i].SetActive(false);
+            //}
+            stop.SetActive(false);
+            Time.timeScale = 1;
+            gameend.SetActive(true);
+            Destroy(gameObject);
+            StaticPlayer.player.gameover = false;
+            
+        }
     }
 }

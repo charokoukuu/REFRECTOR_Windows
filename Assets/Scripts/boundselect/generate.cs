@@ -20,7 +20,7 @@ public class generate : MonoBehaviour
         {
             delta += Time.deltaTime;
             if (judge) { Create("title"); judge = false; }
-            if (delta > 2.6f)
+            if (delta > 3f)
             {
                 Create("title");
                 delta = 0;
@@ -43,7 +43,7 @@ public class generate : MonoBehaviour
         if (value == "title")
         {
             GameObject prefab = Instantiate((GameObject)Resources.Load("Ball/" + Now.nowBall));
-            prefab.transform.position = new Vector3(3.07f, 4.25f, 1);
+            prefab.transform.position = new Vector3(0.22f, 4.25f, 1);
             prefab.AddComponent<jumpbound2>();
             prefab.AddComponent<Rigidbody>();
         }
