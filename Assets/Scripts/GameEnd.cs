@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class GameEnd : MonoBehaviour
 {
-    public GameObject end,stop,gameend,iqfield,gameoverdialog,se;
+    public GameObject end,stop,gameend,iqfield,gameoverdialog,se,particle;
     GameObject bgmobj;
     BgmDirector bgm;
     //public GameObject[] stop=new GameObject[2];
     public AudioClip CoinSe, Click, don;
     AudioSource audiosource;
     int coins = 0;
+    Rigidbody rd;
     void Start()
     {
+        rd = GetComponent<Rigidbody>();
         se = GameObject.FindGameObjectWithTag("SE");
         if (!gameoverdialog)  gameoverdialog.SetActive(false); 
         bgmobj = GameObject.FindGameObjectWithTag("bgm");
@@ -27,6 +29,7 @@ public class GameEnd : MonoBehaviour
             StartCoroutine("create");
             Time.timeScale = 1;
             Destroy(gameObject.GetComponent<Rigidbody>());
+            particle.GetComponent<ParticleSystem>().Play();
             //audiosource.PlayOneShot(Click);
         }
         if (other.gameObject.tag == "coin")
@@ -43,23 +46,28 @@ public class GameEnd : MonoBehaviour
             PlayerPrefs.Save();
 
         }
-        if (other.gameObject.tag == "wall")
-        {
-            Debug.Log("don");
-            audiosource.PlayOneShot(don);
-        }
-     
+  
+       
+
     }
     IEnumerator create()
     {
         yield return new WaitForSeconds(0.1f);
-       
         StaticPlayer.player.gameclear = true;
         Destroy(gameObject);
     }
     void OnCollisionEnter(Collision collision)
     {
-        se.GetComponent<SEDirector>().Don();
+        if (collision.gameObject.tag == "wall2")
+        {
+            se.GetComponent<SEDirector>().Pon();
+            Debug.Log("wall2");
+            rd.AddForce(6.5f, 0, 0, ForceMode.Impulse);
+        }
+        else
+        {
+            se.GetComponent<SEDirector>().Don();
+        }
     }
 
 

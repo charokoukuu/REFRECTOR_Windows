@@ -7,15 +7,28 @@ using System.IO;
 
 public class loadScene : MonoBehaviour
 {
+    public GameObject SE;
+    private void Start()
+    {
+        SE = GameObject.FindGameObjectWithTag("SE");
+    }
     public void Click()
     {
+        SE.GetComponent<SEDirector>().Kirakira();
         if (StaticPlayer.player.clearStage < Now.nowStage)
         {
             StaticPlayer.player.clearStage = Now.nowStage;
             StaticPlayer.savePlayerData(StaticPlayer.player);
         }
         Now.nowStage++;
-        FadeManager.Instance.LoadScene("Bound",1.0f);
+        if (Now.nowStage >= 9)
+        {
+            FadeManager.Instance.LoadScene("title", 1.0f);
+        }
+        else
+        {
+            FadeManager.Instance.LoadScene("Bound", 1.0f);
+        }
     }
     public void titleClick()
     {

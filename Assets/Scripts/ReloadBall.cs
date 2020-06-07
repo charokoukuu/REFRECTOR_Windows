@@ -25,7 +25,7 @@ public class ReloadBall : MonoBehaviour
 
   void Update()
   {
-    if (this.gameObject.transform.position.y < -10)
+    if (this.gameObject.transform.position.y < -10|| this.gameObject.transform.position.y > 20)
     {
       Instantiate(gameObject, pos, Quaternion.identity);
       Destroy(gameObject);

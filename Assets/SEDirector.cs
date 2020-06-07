@@ -5,7 +5,7 @@ using UnityEngine;
 public class SEDirector : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip clickSE, click2,coin,don,kirakira,clear,over;
+    public AudioClip clickSE, click2,coin,don,kirakira,clear,over,pon;
     // Start is called before the first frame update
 
     void Start()
@@ -41,6 +41,10 @@ public class SEDirector : MonoBehaviour
     public void Over()
     {
         audioSource.PlayOneShot(over);
+    }
+    public void Pon()
+    {
+        audioSource.PlayOneShot(pon);
     }
     // Update is called once per frame
     void Update()

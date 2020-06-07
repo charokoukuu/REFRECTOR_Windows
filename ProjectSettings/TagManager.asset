@@ -13,6 +13,7 @@ TagManager:
   - setting
   - bgm
   - SE
+  - wall2
   layers:
   - Default
   - TransparentFX

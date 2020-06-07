@@ -41,27 +41,27 @@ public class leveldirector : MonoBehaviour
                 break;
             case 4:
                 level = 50;
-                size = 70;
+                size = 90;
                 break;
             case 5:
-                level = 90;
-                size = 40;
+                level = 70;
+                size = 90;
                 break;
             case 6:
-                level = 70;
-                size = 50;
+                level = 90;
+                size = 90;
                 break;
             case 7:
-                level = 70;
-                size = 50;
+                level = 50;
+                size = 40;
                 break;
             case 8:
                 level = 70;
-                size = 50;
+                size = 40;
                 break;
             case 9:
-                level = 70;
-                size = 50;
+                level = 90;
+                size = 40;
                 break;
         }
         //ball = GameObject.FindGameObjectWithTag("selectball");

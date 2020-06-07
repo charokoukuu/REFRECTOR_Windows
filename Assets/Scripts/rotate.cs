@@ -19,6 +19,8 @@ public class rotate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(Now.nowStage==5|| Now.nowStage == 7) { inverse = true; }
+        if (Now.nowStage == 8) { speed = 20; };
             vec = inverse? -1 : 1;
         PackText = GameObject.Find("PackName");
     }
@@ -44,7 +46,7 @@ public class rotate : MonoBehaviour
         }
         if (mode == 0)
         {
-              transform.Rotate(0, 0, vec * speed);
+              transform.Rotate(0, 0, -vec * speed);
         }
         else if(mode==1)
         {

@@ -66,7 +66,7 @@ public class posget : MonoBehaviour
             // {
             iqScore = iqScore - 3;
             iqText.GetComponent<Text>().text = Mathf.Round(iqScore / 10).ToString();
-            if (iqScore < 0)
+            if (iqScore <= 0)
             {
                 StaticPlayer.player.gameover = true;
             }

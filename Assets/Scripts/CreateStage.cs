@@ -8,16 +8,25 @@ public class CreateStage : MonoBehaviour
     public GameObject wall;
     public GameObject basket;
     public GameObject rotateWall;
+    public GameObject moveWall;
+    public GameObject wall2;
+    public int DebugStage;
     Stage stage;
     void Awake()
     {
+        if (DebugStage != 200) Now.nowStage=DebugStage;
         stage = loadStageData(Now.nowStage);
     }
     void Start()
     {
         basket.transform.position = stage.basketPos;
         basket.transform.rotation = Quaternion.Euler(stage.basketRot);
+        wall2.transform.rotation = Quaternion.Euler(stage.wall2Rot);
         wall.transform.position = stage.wallPos;
+        wall2.transform.position = stage.wall2Pos;
+        rotateWall.transform.position = stage.RotateWall;
+        moveWall.transform.position = stage.MoveWall;
+
 
         //aaaaa
         wall.transform.rotation = Quaternion.Euler(stage.wallRot);
@@ -71,12 +80,19 @@ public class Stage
     public Vector3 basketRot;
     public Vector3 wallPos;
     public Vector3 wallRot;
+    public Vector3 wall2Pos;
+    public Vector3 wall2Rot;
+    public Vector3 RotateWall;
+    public Vector3 MoveWall;
+
     public Stage()
     {
-        basketPos = new Vector3(0, 0, 0);
-        basketRot = new Vector3(0, 0, 0);
-        wallPos = new Vector3(0, 0, 0);
-        wallRot = new Vector3(0, 0, 0);
+        basketPos = new Vector3(999, 999, 999);
+        basketRot = new Vector3(999, 999, 999);
+        wallPos = new Vector3(999, 999, 999);
+        wall2Pos = new Vector3(999, 999, 999);
+        MoveWall = new Vector3(999, 999,999);
+            
     }
 
 }
