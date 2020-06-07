@@ -32,11 +32,11 @@ public class JsonRead : MonoBehaviour
 [System.Serializable]
 public class Player
 {
-    public int clearStage;
+    public float clearStage;
     public StageInfo[] stageInfos;
     public int[] getBall;
     public int totalCoin;
-    public bool gameover,gameclear,settingmenu;
+    public bool gameover, gameclear, settingmenu;
     public Player()
     {
         clearStage = 0;

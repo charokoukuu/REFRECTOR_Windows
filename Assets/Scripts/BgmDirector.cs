@@ -7,7 +7,7 @@ public class BgmDirector : MonoBehaviour
 {
     public AudioSource audios;
     float delta = 0, teisizikan = 0;
- 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,7 @@ public class BgmDirector : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(PlayerPrefs.GetFloat("BGM", 0.5f));
+        // Debug.Log(PlayerPrefs.GetFloat("BGM", 0.5f));
         audios.volume = PlayerPrefs.GetFloat("BGM", 0.1f);
         delta += Time.deltaTime;
     }

@@ -25,7 +25,7 @@ public class CreateStage : MonoBehaviour
 
 
     }
-    Stage loadStageData(int num)
+    Stage loadStageData(float num)
     {
         string datastr = "";
         StreamReader gameStage;

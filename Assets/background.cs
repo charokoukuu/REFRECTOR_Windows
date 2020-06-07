@@ -6,21 +6,22 @@ using UnityEngine.UI;
 public class background : MonoBehaviour
 {
     public GameObject canvas;
-    int round=0;
+    float round = 0;
     //public Image img;
     // Start is called before the first frame update
     void Start()
     {
-        round = Random.Range(1, 4);
+        round = Mathf.Ceil(Now.nowStage / 2);
+        Debug.Log(round);
         GameObject prefab;
-       prefab = Instantiate((GameObject)Resources.Load("images/" + round));
+        prefab = Instantiate((GameObject)Resources.Load("images/" + round));
         //img.GetComponent<Image>().sprite = Resources.Load("images" + round);
-       prefab.transform.SetParent(canvas.transform, false);
+        prefab.transform.SetParent(canvas.transform, false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

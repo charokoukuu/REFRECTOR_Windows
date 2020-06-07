@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class StageLoad : MonoBehaviour
 {
-    public GameObject numText,se;
+    public GameObject numText, se;
     public GameObject enableButton;
     // Start is called before the first frame update
     void Start()
     {
         se = GameObject.FindGameObjectWithTag("SE");
-        int clearStageNum = StaticPlayer.player.clearStage;
+        float clearStageNum = StaticPlayer.player.clearStage;
         int stageNum = int.Parse(numText.GetComponent<Text>().text);
         if (clearStageNum + 1 < stageNum)
         {
@@ -23,6 +23,6 @@ public class StageLoad : MonoBehaviour
     {
         se.GetComponent<SEDirector>().Kirakira();
         Now.nowStage = int.Parse(numText.GetComponent<Text>().text);
-        FadeManager.Instance.LoadScene("Bound",1);
+        FadeManager.Instance.LoadScene("Bound", 1);
     }
 }

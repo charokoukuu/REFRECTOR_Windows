@@ -5,8 +5,8 @@ using UnityEngine;
 public class ClearContrller : MonoBehaviour
 {
     //public AudioClip Click;
-   public AudioSource audiosource;
-    public GameObject end, stop,button,generate,bgm,se;
+    public AudioSource audiosource;
+    public GameObject end, stop, button, generate, bgm, se;
     public RectTransform iq;
     bool judge;
     // Start is called before the first frame update
@@ -26,9 +26,9 @@ public class ClearContrller : MonoBehaviour
             se.GetComponent<SEDirector>().Clear();
             StartCoroutine("gene");
         }
-        if (judge&& iq.transform.position.y > 515)
+        if (judge && iq.transform.position.y > 515)
         {
-            iq.position += new Vector3(0, -5, 0);
+            iq.position += new Vector3(0, -15, 0);
         }
         if (StaticPlayer.player.settingmenu)
         {
@@ -50,7 +50,7 @@ public class ClearContrller : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         //audiosource.PlayOneShot(Click);
-       
+
         end.SetActive(true);
         stop.SetActive(false);
         StaticPlayer.player.gameclear = false;
